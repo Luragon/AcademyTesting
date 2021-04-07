@@ -2,6 +2,7 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2021-04-05T16:27:06 CDT" name="Default suite" finished-at="2021-04-05T16:27:42 CDT" duration-ms="36198">
     <groups>
     </groups>
@@ -20,6 +21,26 @@
           </reporter-output>
         </test-method> <!-- endSession -->
       </class> <!-- PageFactoryTest -->
+=======
+  <suite started-at="2021-04-05T22:14:17 CDT" name="Default suite" finished-at="2021-04-05T22:14:41 CDT" duration-ms="24153">
+    <groups>
+    </groups>
+    <test started-at="2021-04-05T22:14:17 CDT" name="Default test" finished-at="2021-04-05T22:14:41 CDT" duration-ms="24153">
+      <class name="TC26_Remove_product_from_cart_summary">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:TC26_Remove_product_from_cart_summary@26275bef]" started-at="2021-04-05T22:14:17 CDT" name="setBaseURL" finished-at="2021-04-05T22:14:28 CDT" duration-ms="11318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseURL -->
+        <test-method signature="TC26_Remove_product_from_cart_summary()[pri:0, instance:TC26_Remove_product_from_cart_summary@26275bef]" started-at="2021-04-05T22:14:28 CDT" name="TC26_Remove_product_from_cart_summary" finished-at="2021-04-05T22:14:40 CDT" duration-ms="12045" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC26_Remove_product_from_cart_summary -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:TC26_Remove_product_from_cart_summary@26275bef]" started-at="2021-04-05T22:14:40 CDT" name="endSession" finished-at="2021-04-05T22:14:41 CDT" duration-ms="769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- TC26_Remove_product_from_cart_summary -->
+>>>>>>> refs/remotes/origin/main
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
