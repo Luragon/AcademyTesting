@@ -4,14 +4,19 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class MainPage {
 
 	final WebDriver driver;
 	
+
+	
 	public MainPage(WebDriver driver) {
 		this.driver=driver;
+		
+
 	}
 	
 	@FindBy(id="search_query_top")
@@ -87,7 +92,16 @@ public class MainPage {
 	@FindBy(xpath="/html/body/div/div[2]/div/div[3]/div/form/p/button/span")
 	WebElement check;
 	
+	@FindBy(xpath="//*[@id='center_column']/div[1]/ul/li[1]")
+	WebElement firstItemH;
+	
+	@FindBy(xpath="//*[@class='product_list grid row']/li[1]")
+	WebElement firstItemM;
+	
 	public void addProductFromHome() throws InterruptedException {
+		
+		Actions actions = new Actions(driver);
+		actions.moveToElement(firstItemH).perform();
 		AddToCartH.click();
 		Thread.sleep(3000);
 		ContinueShopping.click();
@@ -96,7 +110,12 @@ public class MainPage {
 
 	
 	public void addProductFromMenu() throws InterruptedException {
+		
 		AddToCartM.click();
+		Thread.sleep(3000);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(firstItemM).perform();
+		AddToCartS.click();
 		Thread.sleep(3000);
 		ContinueShopping.click();
 		Thread.sleep(3000);
@@ -106,6 +125,9 @@ public class MainPage {
 		searchBox.sendKeys(clothes);
 		Thread.sleep(3000);
 		searchButton.click();
+		Thread.sleep(3000);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(firstItemM).perform();
 		Thread.sleep(3000);
 		AddToCartS.click();
 		Thread.sleep(3000);

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SelectPaymentBankWire">
+      <class name="PageFactoryTest">
         <methods>
-          <include name="endSession"/>
           <include name="setBaseURL"/>
-          <include name="payment"/>
+          <include name="endSession"/>
+          <include name="addProductMenu"/>
         </methods>
-      </class> <!-- SelectPaymentBankWire -->
+      </class> <!-- PageFactoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

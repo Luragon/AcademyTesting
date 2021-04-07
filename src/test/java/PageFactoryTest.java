@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -24,6 +25,9 @@ WebDriver driver;
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		Actions actions = new Actions(driver);
+
 		Thread.sleep(3000);
 	}
 	
@@ -31,7 +35,7 @@ WebDriver driver;
 	public void addProductMain() throws InterruptedException {
 		MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
 		mainpage.addProductFromHome();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 	}
 	
 	@Test

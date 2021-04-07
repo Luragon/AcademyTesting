@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -18,10 +19,16 @@ WebDriver driver;
 	
 	@BeforeTest
 	public void setBaseURL() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:/Users/Soular/Documents/chromedriver_win32/chromedriver.exe");
+		
+
+		System.setProperty("webdriver.chrome.driver","C:/Users/Work/Downloads/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
+		
+		Actions actions = new Actions(driver);
+		
+		
 		Thread.sleep(3000);
 	}
 	
