@@ -92,7 +92,7 @@ public class TC05_08_CreateAccountTest {
 		// Input State
 		createAccPage.enterState("Connecticut");
 
-		// Input State
+		// Input Postal Code
 		createAccPage.enterPostalCode("68934");
 
 		// Input Additional Info
@@ -104,7 +104,7 @@ public class TC05_08_CreateAccountTest {
 		// Input Mobile Phone Info
 		createAccPage.enterMobilePhone("8181878564");
 
-		// Input Additional Info
+		// Input Additional Info Alias
 		createAccPage.enterAddressAlias("My Adress Test");
 
 		// Sign Up
