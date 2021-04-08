@@ -2,6 +2,7 @@ package Pages;
 
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -18,6 +19,18 @@ public class MainPage {
 		
 
 	}
+	
+	@FindBy(xpath="//a[@class='login']")
+	WebElement clickSignIn;
+	
+	@FindBy(xpath="//input[@id='email']")
+	WebElement InputEmail;
+	
+	@FindBy(xpath="//input[@id='passwd']")
+	WebElement InputPass;
+	
+	@FindBy(xpath=".//button[@id='SubmitLogin']")
+	WebElement clickSubmitLogin;
 	
 	@FindBy(id="search_query_top")
 	WebElement searchBox;
@@ -235,6 +248,67 @@ public class MainPage {
 	public void agreeToTerms() throws InterruptedException {
 		termsCheckbox.click();
 		Thread.sleep(500);
+	}
+	
+	public void LoginHP() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		clickSignIn.click();
+		Thread.sleep(2000);
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(2000);
+		InputEmail.sendKeys("lolazo@yopmail.com");
+		Thread.sleep(1000);
+		InputPass.sendKeys("12345");
+		Thread.sleep(1000);
+		clickSubmitLogin.click();
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(5000);
+	}
+	
+	
+	public void LoginER() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		clickSignIn.click();
+		Thread.sleep(2000);
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(2000);
+		InputEmail.sendKeys("");
+		Thread.sleep(1000);
+		InputPass.sendKeys("12345");
+		Thread.sleep(1000);
+		clickSubmitLogin.click();
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(5000);
+	}
+	
+	public void LoginPR() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		clickSignIn.click();
+		Thread.sleep(2000);
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(2000);
+		InputEmail.sendKeys("lolazo@yopmail.com");
+		Thread.sleep(1000);
+		InputPass.sendKeys("");
+		Thread.sleep(1000);
+		clickSubmitLogin.click();
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(5000);
+	}
+	
+	public void LoginAF() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		clickSignIn.click();
+		Thread.sleep(2000);
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(2000);
+		InputEmail.sendKeys("lolazo@yopmail.com");
+		Thread.sleep(1000);
+		InputPass.sendKeys("12346");
+		Thread.sleep(1000);
+		clickSubmitLogin.click();
+		js.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(5000);
 	}
 	
 }
