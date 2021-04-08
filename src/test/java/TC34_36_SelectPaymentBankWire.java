@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import Pages.MainPage;
 
-public class SelectPaymentBankWire {
+public class TC34_36_SelectPaymentBankWire {
 
 WebDriver driver;
 	

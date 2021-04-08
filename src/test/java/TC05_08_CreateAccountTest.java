@@ -13,7 +13,7 @@ import Pages.AuthenticationPage;
 import Pages.CreateAccountPage;
 import Pages.MainPage;
 
-public class CreateAccountTest {
+public class TC05_08_CreateAccountTest {
 
 	WebDriver driver;
 

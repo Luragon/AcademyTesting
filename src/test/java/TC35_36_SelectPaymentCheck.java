@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import Pages.MainPage;
 
-public class SelectPaymentCheck {
+public class TC35_36_SelectPaymentCheck {
 
 WebDriver driver;
 	
