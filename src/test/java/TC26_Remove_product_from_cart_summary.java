@@ -27,20 +27,21 @@ WebDriver driver;
 
 	@Test
 	public void TC26_Remove_product_from_cart_summary() throws InterruptedException{
-		//Step 1. El Usuario busca un vestido
+		
+		//Step 1. User search for dress
 		MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
 		mainpage.searchClothes("dress");
 				
-		//Step 2 El Usuario da click a un vestido 
+		//Step 2 User click on first Dress 
 		mainpage.dress();
 				
-		//Step 3 El usuario da click a agregar al carrito
+		//Step 3 User click on add to cart
 		mainpage.cart();
 		
-		//Step 4 El usuario da click en proceed to checkout
+		//Step 4 User click on proceed to checkout
 		mainpage.checkout();
 		
-		//Step 5 El usuario da click en el icono de eliminar producto en la pagina de cart summary
+		//Step 5 User click on Delete icon Product on Cart Summary Web Page
 		mainpage.trash();
 		
 	}

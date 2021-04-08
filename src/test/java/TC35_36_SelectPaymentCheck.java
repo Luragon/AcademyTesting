@@ -2,6 +2,7 @@
 import java.util.concurrent.TimeUnit;
 
 
+
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 
 import Pages.MainPage;
 
-public class SelectPaymentBankWire {
+public class TC35_36_SelectPaymentCheck {
 
 WebDriver driver;
 	
@@ -28,46 +29,45 @@ WebDriver driver;
 	
 	@Test
 	public void payment() throws InterruptedException{
-		//Step 1. El Usuario busca un vestido
-		MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
+MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
 		
-		
+		//Step 1. User searches "dress"
 		mainpage.searchClothes("dress");
 				
-		//Step 2 El Usuario da click a un vestido 
+		//Step 2 User clicks on the first result of dress
 		mainpage.dress();
 				
-		//Step 3 El usuario da click a agregar al carrito
+		//Step 3 User clicks on add to cart
 		mainpage.cart();
 		
-		//Step 4 El usuario da click en proceed to checkout
+		//Step 4 User clicks on proceed to checkout
 		mainpage.checkout();
 		
-		//Step 5 El usuario da click en proceed to checkout
+		//Step 5 User clicks on proceed to checkout (two)
 		mainpage.checkouttwo();
 		
-		//Step 6 El usuario ingresa su correo
-		mainpage.writeEmail("kevinibarraloera@gmail.com");
+		//Step 6 User enters its email
+		mainpage.writeEmail("kevinibalo@hotmail.com");
 		
-		// Step 7 El usuario ingresa su password
-		mainpage.writePassword("dragonfist98");
+		// Step 7 User enters its password
+		mainpage.writePassword("marinela");
 		
-		// Step 8 El usuario inicia sesion dando click en submit
+		// Step 8 User clicks on submit
 		mainpage.Submitbtn();
 		
-		//Step 9 El usuario da click en proceed to checkout
+		//Step 9 User clicks on proceed to checkout (three)
 		mainpage.checkouthree();
 		
-		//Step 10 El usuario da click en el checkbox donde acepta los terminos
+		//Step 10 User checks the agree to terms checkbox
 		mainpage.agreeToTerms();
 		
-		//Step 11 El usuario da click en proceed to checkout
+		//Step 11 User clicks on proceed to checkout (four)
 		mainpage.checkoutfour();
 		
-		//Step 12 El usuario selecciona cheque como opcion de compra
-		mainpage.bankwire();
+		//Step 12 User selects check as payment option
+		mainpage.check();
 		
-		//Step 12 El usuario confirma
+		//Step 13 User confirms the purchase
 		mainpage.confirm();
 							
 	}

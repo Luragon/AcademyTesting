@@ -13,14 +13,14 @@ import Pages.AuthenticationPage;
 import Pages.CreateAccountPage;
 import Pages.MainPage;
 
-public class CreateAccountTest {
+public class TC05_08_CreateAccountTest {
 
 	WebDriver driver;
 
 	@BeforeTest
 	public void setBaseURL() throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "C:/Users/Work/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Soular\\Downloads\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
@@ -32,13 +32,13 @@ public class CreateAccountTest {
 		MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
 		AuthenticationPage authPage = PageFactory.initElements(driver, AuthenticationPage.class);
 
-		// Click a sign in button
+		// Click sign in button
 		mainpage.openSignInPage();
 
-		// Ingresa correo a registrar
-		authPage.enterRegisterEmail("test3team2.com");
+		// Enter email to be register
+		authPage.enterRegisterEmail("testAccount@team2.com");
 
-		// Click a crear cuenta
+		// Click create account
 		authPage.clickCreateAccountButton();
 	}
 
@@ -57,7 +57,7 @@ public class CreateAccountTest {
 		createAccPage.enterLastName("Test");
 
 		// Input Email
-		createAccPage.enterEmail("test@team2.com");
+		createAccPage.enterEmail("testAccount@team2.com");
 
 		// Input Last Name
 		createAccPage.enterPassword("12345");
@@ -92,7 +92,7 @@ public class CreateAccountTest {
 		// Input State
 		createAccPage.enterState("Connecticut");
 
-		// Input State
+		// Input Postal Code
 		createAccPage.enterPostalCode("68934");
 
 		// Input Additional Info
@@ -104,7 +104,7 @@ public class CreateAccountTest {
 		// Input Mobile Phone Info
 		createAccPage.enterMobilePhone("8181878564");
 
-		// Input Additional Info
+		// Input Additional Info Alias
 		createAccPage.enterAddressAlias("My Adress Test");
 
 		// Sign Up

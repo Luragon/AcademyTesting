@@ -14,7 +14,7 @@ import Pages.AuthenticationPage;
 import Pages.CreateAccountPage;
 import Pages.MainPage;
 
-public class PageFactoryTest {
+public class TC17_18_19_PageFactoryTest {
 
 WebDriver driver;
 	

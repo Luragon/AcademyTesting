@@ -7,12 +7,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Pages.MainPage;
 
-public class NewTest {
+public class TC01_02_03_04_SignIn {
 WebDriver driver;
 	
 	@BeforeTest
   public void SetBaseURL() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:/Users/Work/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Soular\\Downloads\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
