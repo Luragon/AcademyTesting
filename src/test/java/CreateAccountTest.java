@@ -20,7 +20,7 @@ public class CreateAccountTest {
 	@BeforeTest
 	public void setBaseURL() throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "C:/Users/Work/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Soular\\Downloads\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
@@ -36,7 +36,7 @@ public class CreateAccountTest {
 		mainpage.openSignInPage();
 
 		// Enter email to be register
-		authPage.enterRegisterEmail("test3team2.com");
+		authPage.enterRegisterEmail("testAccount@team2.com");
 
 		// Click create account
 		authPage.clickCreateAccountButton();
@@ -57,7 +57,7 @@ public class CreateAccountTest {
 		createAccPage.enterLastName("Test");
 
 		// Input Email
-		createAccPage.enterEmail("test@team2.com");
+		createAccPage.enterEmail("testAccount@team2.com");
 
 		// Input Last Name
 		createAccPage.enterPassword("12345");

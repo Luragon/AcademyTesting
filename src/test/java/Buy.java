@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 public class Buy {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/Work/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Soular\\Downloads\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		driver.manage().window().maximize();
@@ -78,6 +78,8 @@ public class Buy {
 				.findElement(By.xpath("//*[@class='dark'][contains(text(),'Your order on My Store is complete.')]"));
 		validateordercomplete.isDisplayed();
 		Thread.sleep(2000);
+				
+			driver.quit();
 
 	}
 
