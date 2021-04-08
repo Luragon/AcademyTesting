@@ -95,6 +95,9 @@ public class TC05_08_CreateAccountTest {
 		// Input Postal Code
 		createAccPage.enterPostalCode("68934");
 
+		//Select Country
+		createAccPage.selectCountry("United States");
+		
 		// Input Additional Info
 		createAccPage.enterAdditional("Additional Info Test");
 

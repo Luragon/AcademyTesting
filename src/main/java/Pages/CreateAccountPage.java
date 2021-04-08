@@ -177,6 +177,13 @@ public class CreateAccountPage {
 		zipCodeTextBox.sendKeys(postal);
 		Thread.sleep(2000);
 	}
+	
+	public void selectCountry(String country) throws InterruptedException {
+		Select dropdown = new Select(countryDropdown);
+		dropdown.selectByVisibleText(country);
+		Thread.sleep(2000);
+	}
+	
 	public void enterAdditional(String addInfo) throws InterruptedException {
 		additionalInfoTextBox.sendKeys(addInfo);
 		Thread.sleep(2000);
