@@ -29,26 +29,26 @@ WebDriver driver;
 	@Test
 	public void TC25_Remove_product_from_cart_dropdown() throws InterruptedException{
 		
-		//Step 1. El Usuario busca un vestido
+		//Step 1. User search for dress
 		MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
 		mainpage.searchClothes("dress");
 		
-		//Step 2 El Usuario da click a un vestido 
+		//Step 2 User click on first Dress 
 		mainpage.dress();
 		
-		//Step 3 El usuario da click a agregar al carrito
+		//Step 3 User click on add to cart
 		mainpage.cart();
 		
-		//Step 4 El usuario da click en continue shopping
+		//Step 4 User click on continue shopping
 		mainpage.continueshopping();
 		
-		//Step 5 El usuario despliega la lista dropdown del carrito 
+		//Step 5 User unfolds the dropdown list on cart 
 		Actions act=new Actions(driver);
 		WebElement ele=driver.findElement(By.xpath("//a[@title='View my shopping cart']"));
 		act.moveToElement(ele).perform();
 		Thread.sleep(1000);
 		
-		//Step 6 El usuario da click en la "x" para eliminar el producto de la lista dropdown del carrito de compras
+		//Step 6 User click on "x" on the cart dropdown list
 		mainpage.removeitem();
 		Thread.sleep(3000);
 		

@@ -32,13 +32,13 @@ public class CreateAccountTest {
 		MainPage mainpage = PageFactory.initElements(driver, MainPage.class);
 		AuthenticationPage authPage = PageFactory.initElements(driver, AuthenticationPage.class);
 
-		// Click a sign in button
+		// Click sign in button
 		mainpage.openSignInPage();
 
-		// Ingresa correo a registrar
+		// Enter email to be register
 		authPage.enterRegisterEmail("test3team2.com");
 
-		// Click a crear cuenta
+		// Click create account
 		authPage.clickCreateAccountButton();
 	}
 
