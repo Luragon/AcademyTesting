@@ -24,9 +24,6 @@ public class CreateAccountTest {
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
-
-		Actions actions = new Actions(driver);
-
 		Thread.sleep(3000);
 	}
 
@@ -45,7 +42,7 @@ public class CreateAccountTest {
 		authPage.clickCreateAccountButton();
 	}
 
-	//Before FillInformation, SignUp is executed
+	//Before FillInformation, SignUp is needed to be executed
 	
 	@Test
 	public void fillInformation() throws InterruptedException {
